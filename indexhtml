@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DJ ISAACKINGS4 | Site Officiel</title>
+
+  <meta name="description" content="Site officiel de DJ ISAACKINGS4. Musique, nouveautés, vidéos et actualités.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050505;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ACCUEIL */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at center, #202020 0%, #090909 45%, #000 100%);
+    }
+
+    .profile {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 45px rgba(255,255,255,0.18);
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 17px;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 6px;
+      border: 1px solid #555;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      background: #111;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 75px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    .title span {
+      color: #aaa;
+    }
+
+    /* PRESENTATION */
+
+    .about {
+      text-align: center;
+      color: #bbb;
+      max-width: 650px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    /* MUSIQUES */
+
+    .music-card {
+      background: #101010;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .music-card h3 {
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .music-card p {
+      color: #888;
+      margin-bottom: 18px;
+    }
+
+    /* LIENS */
+
+    .links {
+      text-align: center;
+    }
+
+    .social {
+      display: block;
+      max-width: 350px;
+      margin: 14px auto;
+      padding: 16px;
+      border: 1px solid #333;
+      border-radius: 15px;
+      color: white;
+      text-decoration: none;
+      background: #101010;
+      transition: 0.3s;
+    }
+
+    .social:hover {
+      transform: translateY(-3px);
+      background: #1c1c1c;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      color: #aaa;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 31px;
+      }
+
+      .profile {
+        width: 185px;
+        height: 185px;
+      }
+
+      section {
+        padding: 60px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ACCUEIL -->
+
+  <header class="hero">
+
+    <img
+      src="ma-photo-1.jpg"
+      alt="DJ ISAACKINGS4"
+      class="profile"
+    >
+
+    <h1>DJ ISAACKINGS4</h1>
+
+    <p>Site officiel • Musique • Énergie • RDC</p>
+
+    <div>
+      <a href="#musiques" class="btn">🎵 Mes musiques</a>
+      <a href="#contact" class="btn">📩 Contact</a>
+    </div>
+
+  </header>
+
+
+  <!-- PRÉSENTATION -->
+
+  <section>
+
+    <h2 class="title">DJ <span>ISAACKINGS4</span></h2>
+
+    <p class="about">
+      Bienvenue sur le site officiel de DJ ISAACKINGS4.
+      Retrouvez ici mes musiques, mes nouveautés, mes vidéos
+      et mes actualités musicales.
+    </p>
+
+  </section>
+
+
+  <!-- MUSIQUES -->
+
+  <section id="musiques">
+
+    <h2 class="title">🎵 Mes musiques</h2>
+
+    <div class="music-card">
+
+      <h3>DJ ISAACKINGS4 WEEKEND</h3>
+
+      <p>Nouvelle musique • Amapiano</p>
+
+      <a href="#" class="btn">▶ Écouter</a>
+
+    </div>
+
+
+    <div class="music-card">
+
+      <h3>TIKA TOKENDE</h3>
+
+      <p>Amapiano • RDC</p>
+
+      <a href="#" class="btn">▶ Écouter</a>
+
+    </div>
+
+  </section>
+
+
+  <!-- RÉSEAUX -->
+
+  <section>
+
+    <h2 class="title">🌐 Retrouvez-moi</h2>
+
+    <div class="links">
+
+      <a href="#" class="social">
+        ▶️ YouTube
+      </a>
+
+      <a href="#" class="social">
+        🎵 TikTok
+      </a>
+
+      <a href="#" class="social">
+        📸 Instagram
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="title">📩 Contact</h2>
+
+    <p class="contact">
+      Pour collaborations, musique et projets :
+      <br><br>
+      <strong>DJ ISAACKINGS4</strong>
+    </p>
+
+  </section>
+
+
+  <footer>
+
+    © 2026 DJ ISAACKINGS4
+    <br>
+    Site officiel
+
+  </footer>
+
+</body>
+</html>
