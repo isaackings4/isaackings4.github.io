@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DJ ISAACKINGS4 | Official Website</title>
+<title>DJ ISAACKINGS4 | Site Officiel</title>
 
 <style>
 *{
@@ -15,10 +15,41 @@
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#050505;
-    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(45,85,130,.45), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(80,100,140,.25), transparent 30%),
+        linear-gradient(135deg,#07101d,#111b2a,#050911);
     line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* LUMIÈRES DU FOND */
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(80,140,200,.10);
+    filter:blur(100px);
+    top:20%;
+    left:-180px;
+    pointer-events:none;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    background:rgba(100,120,180,.08);
+    filter:blur(100px);
+    bottom:5%;
+    right:-150px;
+    pointer-events:none;
 }
 
 /* MENU */
@@ -28,9 +59,9 @@ header{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(0,0,0,.94);
-    border-bottom:1px solid #222;
-    backdrop-filter:blur(12px);
+    background:rgba(5,10,18,.78);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.10);
 }
 
 .navbar{
@@ -38,27 +69,27 @@ header{
     margin:auto;
     padding:18px 25px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-    font-size:21px;
+    font-size:20px;
     font-weight:900;
     letter-spacing:2px;
 }
 
 .logo span{
-    color:#aaa;
+    color:#8ea8c5;
 }
 
 nav{
     display:flex;
-    gap:25px;
+    gap:24px;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     font-size:13px;
     font-weight:bold;
@@ -66,28 +97,38 @@ nav a{
 }
 
 nav a:hover{
-    color:#888;
+    color:#9fc4e8;
 }
 
 /* ACCUEIL */
 .hero{
     min-height:100vh;
+    max-width:1250px;
+    margin:auto;
+    padding:140px 7% 90px;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:70px;
-    padding:130px 8% 80px;
-    background:
-    radial-gradient(circle at 70% 40%,#222 0%,#080808 35%,#050505 70%);
+    gap:80px;
+    position:relative;
+}
+
+.hero-text{
+    max-width:620px;
+    order:2;
 }
 
 .photo-box{
     width:390px;
     height:500px;
-    border-radius:20px;
+    border-radius:25px;
     overflow:hidden;
-    border:1px solid #333;
-    box-shadow:0 0 50px rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.20);
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55),
+        0 0 50px rgba(100,150,200,.12);
+    order:1;
+    background:#101923;
 }
 
 .photo-box img{
@@ -96,61 +137,61 @@ nav a:hover{
     object-fit:cover;
 }
 
-.hero-text{
-    max-width:600px;
-}
-
 .subtitle{
-    color:#999;
-    font-size:13px;
-    letter-spacing:4px;
+    color:#91b4d5;
+    font-size:12px;
+    letter-spacing:5px;
     margin-bottom:20px;
 }
 
 h1{
     font-size:clamp(55px,8vw,100px);
-    line-height:.9;
-    letter-spacing:-4px;
+    line-height:.88;
+    letter-spacing:-5px;
 }
 
 h1 span{
-    color:#aaa;
+    color:#9bb4ce;
 }
 
 .hero-text p{
+    color:#b7c2ce;
     margin-top:30px;
-    color:#bbb;
-    max-width:520px;
+    max-width:560px;
+    font-size:16px;
 }
 
 .buttons{
-    margin-top:30px;
     display:flex;
-    gap:15px;
+    gap:14px;
     flex-wrap:wrap;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
     padding:14px 23px;
-    border:1px solid #555;
     color:white;
     text-decoration:none;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    font-size:12px;
     font-weight:bold;
-    font-size:13px;
     transition:.3s;
 }
 
 .btn:hover{
-    background:white;
-    color:black;
+    background:#fff;
+    color:#07101d;
+    transform:translateY(-2px);
 }
 
 /* SECTIONS */
 section{
-    padding:100px 8%;
     max-width:1200px;
     margin:auto;
+    padding:100px 7%;
 }
 
 .section-title{
@@ -158,12 +199,13 @@ section{
 }
 
 .section-title small{
-    color:#888;
+    color:#82a9cc;
     letter-spacing:4px;
+    font-size:11px;
 }
 
 .section-title h2{
-    font-size:50px;
+    font-size:52px;
     margin-top:8px;
 }
 
@@ -171,60 +213,71 @@ section{
 .music-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:20px;
+    gap:22px;
 }
 
 .music-card{
+    min-height:230px;
     padding:35px;
-    min-height:220px;
-    border:1px solid #292929;
-    background:linear-gradient(145deg,#111,#080808);
+    border:1px solid rgba(255,255,255,.12);
+    background:
+        linear-gradient(145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.025));
+    backdrop-filter:blur(15px);
+    border-radius:18px;
     transition:.3s;
 }
 
 .music-card:hover{
-    transform:translateY(-5px);
-    border-color:#555;
+    transform:translateY(-6px);
+    border-color:rgba(150,190,220,.45);
 }
 
 .music-number{
-    color:#777;
-    font-size:13px;
+    color:#7894ae;
+    font-size:12px;
+    letter-spacing:2px;
 }
 
 .music-card h3{
-    font-size:28px;
-    margin:20px 0 10px;
+    font-size:25px;
+    margin:18px 0 10px;
 }
 
 .music-card p{
-    color:#999;
+    color:#9faebb;
 }
 
 .music-link{
     display:inline-block;
     margin-top:25px;
-    color:white;
+    color:#fff;
     text-decoration:none;
-    border-bottom:1px solid #555;
+    border-bottom:1px solid #8aa6c0;
+    padding-bottom:3px;
 }
 
 /* À PROPOS */
 .about{
-    background:#080808;
     max-width:none;
-    padding-left:8%;
-    padding-right:8%;
+    background:
+        linear-gradient(
+        120deg,
+        rgba(20,37,56,.78),
+        rgba(5,12,21,.55));
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .about-content{
-    max-width:850px;
+    max-width:900px;
 }
 
 .about-content p{
-    color:#aaa;
+    color:#c0cbd5;
     font-size:18px;
-    margin-bottom:20px;
+    margin-bottom:22px;
 }
 
 /* ÉVÉNEMENTS */
@@ -232,35 +285,36 @@ section{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:25px 0;
-    border-bottom:1px solid #252525;
+    padding:28px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .event h3{
-    font-size:22px;
+    font-size:21px;
 }
 
 .event p{
-    color:#888;
+    color:#8f9eac;
 }
 
 .event-date{
-    color:#aaa;
-    font-size:13px;
+    color:#91b4d5;
+    font-size:12px;
+    font-weight:bold;
 }
 
 /* CONTACT */
 .contact{
-    background:#080808;
     max-width:none;
+    background:rgba(3,8,15,.65);
 }
 
 .contact-box{
-    max-width:800px;
+    max-width:850px;
 }
 
 .contact-box p{
-    color:#aaa;
+    color:#aebbc7;
     margin-bottom:30px;
 }
 
@@ -271,32 +325,37 @@ section{
 }
 
 .contact-links a{
-    text-decoration:none;
     color:white;
-    border:1px solid #444;
+    text-decoration:none;
     padding:15px 25px;
+    border:1px solid rgba(255,255,255,.20);
+    background:rgba(255,255,255,.04);
     transition:.3s;
 }
 
 .contact-links a:hover{
     background:white;
-    color:black;
+    color:#07101d;
 }
 
 /* RÉSEAUX */
 .social{
     text-align:center;
-    padding:80px 20px;
-    background:#030303;
+    padding:90px 20px;
+    max-width:none;
+    background:
+        radial-gradient(circle,
+        rgba(75,115,155,.18),
+        transparent 55%);
 }
 
 .social h2{
     font-size:40px;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .social p{
-    color:#888;
+    color:#8e9baa;
     margin-bottom:30px;
 }
 
@@ -308,27 +367,26 @@ section{
 }
 
 .social-buttons a{
-    display:inline-block;
-    padding:15px 30px;
     color:white;
     text-decoration:none;
-    border:1px solid #444;
-    font-weight:bold;
+    padding:15px 30px;
+    border:1px solid rgba(255,255,255,.22);
     transition:.3s;
 }
 
 .social-buttons a:hover{
-    background:white;
-    color:black;
+    background:#fff;
+    color:#07101d;
 }
 
 /* FOOTER */
 footer{
     padding:40px 20px;
     text-align:center;
-    border-top:1px solid #222;
-    color:#777;
-    font-size:13px;
+    color:#71808f;
+    font-size:12px;
+    border-top:1px solid rgba(255,255,255,.10);
+    background:#050a11;
 }
 
 /* MOBILE */
@@ -337,33 +395,38 @@ footer{
     .navbar{
         padding:15px;
         flex-direction:column;
-        gap:15px;
+        gap:14px;
     }
 
     nav{
-        gap:12px;
+        gap:13px;
         flex-wrap:wrap;
         justify-content:center;
     }
 
     nav a{
-        font-size:11px;
+        font-size:10px;
     }
 
     .hero{
         flex-direction:column;
-        padding:150px 20px 70px;
+        padding:150px 20px 80px;
         text-align:center;
-        gap:40px;
+        gap:42px;
+    }
+
+    .hero-text{
+        order:2;
     }
 
     .photo-box{
-        width:280px;
-        height:360px;
+        order:1;
+        width:285px;
+        height:370px;
     }
 
     h1{
-        font-size:58px;
+        font-size:57px;
         letter-spacing:-3px;
     }
 
@@ -387,6 +450,14 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .music-card{
+        padding:28px;
+    }
+
+    .about-content p{
+        font-size:16px;
+    }
+
     .event{
         display:block;
     }
@@ -394,6 +465,10 @@ footer{
     .event-date{
         display:block;
         margin-top:8px;
+    }
+
+    .social h2{
+        font-size:32px;
     }
 }
 </style>
@@ -431,7 +506,7 @@ footer{
     <div class="hero-text">
 
         <div class="subtitle">
-            OFFICIAL WEBSITE
+            SITE OFFICIEL • ARTISTE • DJ
         </div>
 
         <h1>
@@ -440,14 +515,15 @@ footer{
         </h1>
 
         <p>
-            Bienvenue dans l'univers officiel de DJ ISAACKINGS4.
-            Découvrez mes musiques, mes projets et mes actualités.
+            Bienvenue dans mon univers musical.
+            Découvrez mes créations, mes projets, mes actualités
+            et mon parcours artistique.
         </p>
 
         <div class="buttons">
 
             <a href="#musique" class="btn">
-                ÉCOUTER MA MUSIQUE
+                DÉCOUVRIR MA MUSIQUE
             </a>
 
             <a href="https://www.youtube.com/@isaackings4-z7d"
@@ -467,7 +543,7 @@ footer{
 <section id="musique">
 
     <div class="section-title">
-        <small>MY MUSIC</small>
+        <small>MES CRÉATIONS</small>
         <h2>Musique</h2>
     </div>
 
@@ -476,7 +552,7 @@ footer{
         <div class="music-card">
 
             <div class="music-number">
-                01 — NEW RELEASE
+                01 — NOUVELLE SORTIE
             </div>
 
             <h3>
@@ -484,7 +560,8 @@ footer{
             </h3>
 
             <p>
-                Nouvelle création musicale de DJ ISAACKINGS4.
+                Une création musicale de DJ ISAACKINGS4,
+                disponible sur ma chaîne officielle.
             </p>
 
             <a href="https://www.youtube.com/@isaackings4-z7d"
@@ -507,30 +584,8 @@ footer{
             </h3>
 
             <p>
-                Un univers Amapiano aux sonorités inspirées de la RDC.
-            </p>
-
-            <a href="https://www.youtube.com/@isaackings4-z7d"
-               target="_blank"
-               class="music-link">
-                Écouter sur YouTube →
-            </a>
-
-        </div>
-
-
-        <div class="music-card">
-
-            <div class="music-number">
-                03 — PROJECT
-            </div>
-
-            <h3>
-                RDC NEW STYLE
-            </h3>
-
-            <p>
-                Amapiano, Sebene et sonorités congolaises.
+                Une création Amapiano portée par une identité
+                musicale inspirée des sonorités congolaises.
             </p>
 
             <a href="https://www.youtube.com/@isaackings4-z7d"
@@ -545,7 +600,31 @@ footer{
         <div class="music-card">
 
             <div class="music-number">
-                04 — COMING SOON
+                03 — UNIVERS MUSICAL
+            </div>
+
+            <h3>
+                RDC NEW STYLE
+            </h3>
+
+            <p>
+                Un univers qui explore l'Amapiano,
+                le Sebene et différentes sonorités congolaises.
+            </p>
+
+            <a href="https://www.youtube.com/@isaackings4-z7d"
+               target="_blank"
+               class="music-link">
+                Écouter →
+            </a>
+
+        </div>
+
+
+        <div class="music-card">
+
+            <div class="music-number">
+                04 — À VENIR
             </div>
 
             <h3>
@@ -553,7 +632,8 @@ footer{
             </h3>
 
             <p>
-                D'autres créations arrivent prochainement.
+                De nouvelles créations musicales sont
+                en préparation.
             </p>
 
             <a href="https://www.youtube.com/@isaackings4-z7d"
@@ -575,11 +655,11 @@ footer{
     <div class="section-title">
 
         <small>
-            ABOUT ME
+            MON UNIVERS
         </small>
 
         <h2>
-            À propos
+            À propos de moi
         </h2>
 
     </div>
@@ -587,18 +667,28 @@ footer{
     <div class="about-content">
 
         <p>
-            Je suis DJ ISAACKINGS4, artiste passionné par la musique
-            et la création de nouvelles ambiances sonores.
+            Je suis <strong>DJ ISAACKINGS4</strong>, un jeune artiste
+            congolais passionné par la musique et la création sonore.
         </p>
 
         <p>
-            Mon univers mélange notamment l'Amapiano, les sonorités
-            congolaises et différentes influences musicales.
+            Créateur de compositions musicales aux influences variées,
+            j'explore plusieurs styles afin de construire un univers
+            musical qui me ressemble.
         </p>
 
         <p>
-            Ce site rassemble mes projets, mes sorties musicales,
-            mes événements et mes réseaux officiels.
+            À travers mes créations, je cherche à transmettre de
+            l'énergie, des émotions et une identité musicale authentique,
+            tout en mettant en valeur les sonorités et la culture de la
+            République démocratique du Congo.
+        </p>
+
+        <p>
+            Mon objectif est de continuer à développer mon univers
+            artistique, partager ma musique avec un public toujours
+            plus large et créer des projets capables de toucher
+            différentes générations.
         </p>
 
     </div>
@@ -612,7 +702,7 @@ footer{
     <div class="section-title">
 
         <small>
-            UPCOMING
+            ACTUALITÉS
         </small>
 
         <h2>
@@ -621,11 +711,9 @@ footer{
 
     </div>
 
-
     <div class="event">
 
         <div>
-
             <h3>
                 DJ ISAACKINGS4 LIVE
             </h3>
@@ -633,7 +721,6 @@ footer{
             <p>
                 Informations à venir
             </p>
-
         </div>
 
         <div class="event-date">
@@ -642,19 +729,16 @@ footer{
 
     </div>
 
-
     <div class="event">
 
         <div>
-
             <h3>
-                NEW MUSIC PROJECT
+                NOUVEAU PROJET MUSICAL
             </h3>
 
             <p>
-                Nouvelle création musicale
+                Nouvelle création de DJ ISAACKINGS4
             </p>
-
         </div>
 
         <div class="event-date">
@@ -672,7 +756,7 @@ footer{
     <div class="section-title">
 
         <small>
-            GET IN TOUCH
+            RESTONS CONNECTÉS
         </small>
 
         <h2>
@@ -681,27 +765,24 @@ footer{
 
     </div>
 
-
     <div class="contact-box">
 
         <p>
-            Pour les collaborations, bookings, projets musicaux
-            ou demandes professionnelles, retrouve DJ ISAACKINGS4
-            sur ses réseaux officiels.
+            Pour les collaborations, projets musicaux, bookings
+            et demandes professionnelles, retrouve-moi sur mes
+            réseaux officiels.
         </p>
-
 
         <div class="contact-links">
 
             <a href="https://www.youtube.com/@isaackings4-z7d"
                target="_blank">
-                YouTube
+                ▶ YouTube
             </a>
-
 
             <a href="https://www.tiktok.com/@isaacking18"
                target="_blank">
-                TikTok
+                ♪ TikTok
             </a>
 
         </div>
@@ -711,7 +792,7 @@ footer{
 </section>
 
 
-<!-- RÉSEAUX OFFICIELS -->
+<!-- RÉSEAUX -->
 <section class="social">
 
     <h2>
@@ -719,7 +800,7 @@ footer{
     </h2>
 
     <p>
-        Retrouvez mes nouvelles sorties et actualités.
+        Nouvelles musiques • Actualités • Projets
     </p>
 
     <div class="social-buttons">
@@ -743,10 +824,11 @@ footer{
 <footer>
 
     <p>
-        © 2026 DJ ISAACKINGS4 — Official Website
+        © 2026 DJ ISAACKINGS4 — Site officiel
     </p>
 
 </footer>
 
 </body>
-  </html>
+    </html>
+
